@@ -1,11 +1,11 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-import { generateOrder } from 'utils/generators';
-import { requestForwarder } from 'utils/utils';
+import { generateOrder } from '../../utils/generators';
+import { requestForwarder } from '../../utils/utils';
 
 @Injectable()
 export class SelectService {
-  constructor(private readonly httpService: HttpService) {}
+  constructor(private readonly httpService: HttpService) { }
 
   async handleSelectEvent(selectPayload: any) {
     console.log('select payload: ', selectPayload);

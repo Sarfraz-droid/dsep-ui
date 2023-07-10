@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "cy:open": "cypress open",
     "cy:run": "cypress run --headless --browser chrome",
-    "cy:test": "start-server-and-test dev http://localhost:5173 cy:run"
+    "test": "start-server-and-test dev http://localhost:5173 cy:run"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",

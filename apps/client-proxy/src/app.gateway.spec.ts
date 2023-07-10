@@ -1,15 +1,19 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppGateway } from './app.gateway';
+import { SearchService } from './search/search.service';
+import { SelectService } from './select/select.service';
+import { HttpModule } from '@nestjs/axios';
 
 describe('AppGateway', () => {
   let gateway: AppGateway;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [AppGateway],
+    const app: TestingModule = await Test.createTestingModule({
+      imports: [HttpModule],
+      providers: [AppGateway, SearchService, SelectService],
     }).compile();
 
-    gateway = module.get<AppGateway>(AppGateway);
+    gateway = app.get<AppGateway>(AppGateway);
   });
 
   it('should be defined', () => {
