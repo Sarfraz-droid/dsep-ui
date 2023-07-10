@@ -22,8 +22,8 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Cypress screenshots
-          path: app/client/cypress/screenshots
+          path: apps/client/cypress/screenshots
       - uses: actions/upload-artifact@v3
         with:
           name: Cypress Videos
-          path: app.client/cypress/videos
+          path: apps/client/cypress/videos
